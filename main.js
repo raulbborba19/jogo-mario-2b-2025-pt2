@@ -1,5 +1,18 @@
 const mario = document.querySelector(".mario")
 const pipe = document.querySelector(".pipe")
+const starButton = document.querySelector(".start")
+const gameOverScreen = document.querySelector(".game-over")
+
+let gameStarted = false;
+
+const starGame = () => {
+    gameStarted = true;
+
+    pipe.style.animation = "pipe-animation 1.5s infine linear";
+
+    startButton.style.display = "none";
+}
+
 
 const jump = () => {
     mario.classList.add("jump");
@@ -29,3 +42,8 @@ const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
     }
 },10);
 document.addEventListener("keydown", jump);
+
+
+const restartGame = () => {
+    window.location.reload();
+}
