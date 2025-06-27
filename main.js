@@ -1,12 +1,12 @@
 const mario = document.querySelector(".mario")
 const pipe = document.querySelector(".pipe")
 const nuvem = document.querySelector(".nuvem")
-const starButton = document.querySelector(".start")
+const startButton = document.querySelector(".start")
 const gameOverScreen = document.querySelector(".game-over")
 
 let gameStarted = false;
 
-const starGame = () => {
+const startGame = () => {
     gameStarted = true;
 
     pipe.style.animation = "pipe-animation 1.5s infine linear";
